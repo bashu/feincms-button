@@ -23,7 +23,7 @@ class ButtonContent(models.Model):
     url = models.URLField(_("URL"))
 
     style = models.CharField(_("style"), max_length=50, choices=appsettings.FEINCMS_BUTTON_STYLES)
-    size = models.CharField(_("zize"), blank=True, default='', max_length=10, choices=appsettings.FEINCMS_BUTTON_SIZES)
+    size = models.CharField(_("size"), blank=True, default='', max_length=10, choices=appsettings.FEINCMS_BUTTON_SIZES)
     align = models.CharField(_("alignment"), blank=True, default='', max_length=50, choices=ALIGN_CHOICES)
 
     class Meta:
