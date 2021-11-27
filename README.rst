@@ -1,12 +1,6 @@
 feincms-button
 ==============
 
-Displaying a Bootstrap 3 Button_ in text.
-
-This button can be used for navigation, for example at the end of a text block. These buttons can't be used in forms.
-
-Authored by `Basil Shubin <https://github.com/bashu>`_, and some great `contributors <https://github.com/bashu/feincms-button/contributors>`_.
-
 .. image:: https://img.shields.io/pypi/v/feincms-button.svg
     :target: https://pypi.python.org/pypi/feincms-button/
 
@@ -15,6 +9,13 @@ Authored by `Basil Shubin <https://github.com/bashu>`_, and some great `contribu
 
 .. image:: https://img.shields.io/github/license/bashu/feincms-button.svg
     :target: https://pypi.python.org/pypi/feincms-button/
+
+.. image:: https://app.travis-ci.com/bashu/feincms-button.svg?branch=develop
+    :target: https://app.travis-ci.com/bashu/feincms-button/
+
+Displaying a Bootstrap 3 Button_ in text.
+
+This button can be used for navigation, for example at the end of a text block. These buttons can't be used in forms.
 
 Installation
 ------------
