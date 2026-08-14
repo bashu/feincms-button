@@ -1,17 +1,17 @@
 feincms-button
 ==============
 
-.. image:: https://img.shields.io/pypi/v/feincms-button.svg
+.. image:: https://badge.fury.io/py/feincms-button.svg
+    :target: https://badge.fury.io/py/feincms-button
+
+.. image:: https://img.shields.io/pypi/pyversions/feincms-button.svg
     :target: https://pypi.python.org/pypi/feincms-button/
 
-.. image:: https://img.shields.io/pypi/dm/feincms-button.svg
+.. image:: https://img.shields.io/pypi/djversions/feincms-button.svg
     :target: https://pypi.python.org/pypi/feincms-button/
 
-.. image:: https://img.shields.io/github/license/bashu/feincms-button.svg
-    :target: https://pypi.python.org/pypi/feincms-button/
-
-.. image:: https://app.travis-ci.com/bashu/feincms-button.svg?branch=develop
-    :target: https://app.travis-ci.com/bashu/feincms-button/
+.. image:: https://github.com/bashu/feincms-button/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/bashu/feincms-button/actions/workflows/test.yml
 
 Displaying a Bootstrap 3 Button_ in text.
 

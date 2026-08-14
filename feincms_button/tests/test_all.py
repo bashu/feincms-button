@@ -17,7 +17,7 @@ class ButtonContentTest(TestCase):
             title="TEST",
         )
 
-        html = content.render(kwargs={"context": {}})
+        html = str(content.render())
 
         self.assertHTMLEqual(
             html,
@@ -34,7 +34,7 @@ class ButtonContentTest(TestCase):
             align="center",
         )
 
-        html = content.render(kwargs={"context": {}})
+        html = str(content.render())
 
         self.assertHTMLEqual(
             html,
