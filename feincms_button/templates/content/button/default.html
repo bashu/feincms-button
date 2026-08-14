@@ -1,3 +1,4 @@
 {% if content.align == 'center' %}<p class="text-center btn-center-wrapper">{% endif %}
-  <a href="{{ content.url|default:'#' }}" class="{{ content.css_classes }}">{{ content.title }}</a>
+<a href="{{ content.url|default:'#' }}"
+   class="{{ content.css_classes }}">{{ content.title }}</a>
 {% if content.align == 'center' %}</p>{% endif %}

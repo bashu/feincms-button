@@ -7,6 +7,6 @@ Page.register_templates(
         "title": "default",
         "path": "base.html",
         "regions": (("main", "Main content area"),),
-    }
+    },
 )
 PageButtonContent = Page.create_content_type(ButtonContent)

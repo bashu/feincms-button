@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 {% load feincms_tags %}
-<html>
+
+<html lang="en">
   <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>
+      {% block title %}{% endblock %}
+    </title>
   </head>
   <body>
-    {% block content %}{% feincms_render_region feincms_page "main" request %}{% endblock %}
+    {% block content %}
+      {% feincms_render_region feincms_page "main" request %}
+    {% endblock %}
   </body>
 </html>

@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from feincms.module.page.models import Page
 
 from .models import PageButtonContent
@@ -57,7 +58,7 @@ class ButtonContentTest(TestCase):
 
         self.assertHTMLEqual(
             html,
-            '<a href="http://example.com" class="btn btn-secondary float-start">TEST3</a>',
+            '<a href="http://example.com" class="btn btn-secondary float-start">TEST3</a>',  # noqa: E501
         )
 
     def test_align_right(self):
@@ -74,7 +75,7 @@ class ButtonContentTest(TestCase):
 
         self.assertHTMLEqual(
             html,
-            '<a href="http://example.com" class="btn btn-secondary float-end">TEST4</a>',
+            '<a href="http://example.com" class="btn btn-secondary float-end">TEST4</a>',  # noqa: E501
         )
 
     def test_align_block(self):
@@ -91,7 +92,7 @@ class ButtonContentTest(TestCase):
 
         self.assertHTMLEqual(
             html,
-            '<a href="http://example.com" class="btn btn-secondary d-block w-100">TEST5</a>',
+            '<a href="http://example.com" class="btn btn-secondary d-block w-100">TEST5</a>',  # noqa: E501
         )
 
     def test_object(self):
@@ -103,7 +104,7 @@ class ButtonContentTest(TestCase):
             title="TEST-STR",
         )
 
-        self.assertEqual(str(content), "TEST-STR")
+        assert str(content) == "TEST-STR"
 
     def test_get_absolute_url(self):
         content = PageButtonContent.objects.create(
@@ -114,4 +115,4 @@ class ButtonContentTest(TestCase):
             title="TEST-URL",
         )
 
-        self.assertEqual(content.get_absolute_url(), "http://example.com")
+        assert content.get_absolute_url() == "http://example.com"
