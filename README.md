@@ -2,13 +2,13 @@
 
 [Full report](https://htmlpreview.github.io/?https://github.com/bashu/feincms-button/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
-| Name                            |    Stmts |     Miss |   Cover |   Missing |
-|-------------------------------- | -------: | -------: | ------: | --------: |
-| feincms\_button/\_\_init\_\_.py |        0 |        0 |    100% |           |
-| feincms\_button/appsettings.py  |        4 |        0 |    100% |           |
-| feincms\_button/contents.py     |       33 |        5 |     85% |36, 39, 46, 48, 50 |
-| feincms\_button/models.py       |        0 |        0 |    100% |           |
-| **TOTAL**                       |   **37** |    **5** | **86%** |           |
+| Name                            |    Stmts |     Miss |    Cover |   Missing |
+|-------------------------------- | -------: | -------: | -------: | --------: |
+| feincms\_button/\_\_init\_\_.py |        0 |        0 |     100% |           |
+| feincms\_button/appsettings.py  |        4 |        0 |     100% |           |
+| feincms\_button/contents.py     |       33 |        0 |     100% |           |
+| feincms\_button/models.py       |        0 |        0 |     100% |           |
+| **TOTAL**                       |   **37** |    **0** | **100%** |           |
 
 
 ## Setup coverage badge
