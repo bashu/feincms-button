@@ -43,11 +43,11 @@ class ButtonContent(models.Model):
         classes = ["btn", self.style, self.size or ""]
         if self.align:
             if self.align == "left":
-                classes.append("pull-left")
+                classes.append("float-start")
             elif self.align == "right":
-                classes.append("pull-right")
+                classes.append("float-end")
             elif self.align == "block":
-                classes.append("btn-block")
+                classes.extend(["d-block", "w-100"])
 
         return " ".join(classes).rstrip().replace("  ", " ")
 

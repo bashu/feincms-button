@@ -29,7 +29,7 @@ class ButtonContentTest(TestCase):
             parent=self.page,
             region="main",
             url="http://example.com",
-            style="btn-default",
+            style="btn-secondary",
             title="TEST2",
             align="center",
         )
@@ -39,7 +39,7 @@ class ButtonContentTest(TestCase):
         self.assertHTMLEqual(
             html,
             '<p class="text-center btn-center-wrapper">'
-            '<a href="http://example.com" class="btn btn-default">TEST2</a>'
+            '<a href="http://example.com" class="btn btn-secondary">TEST2</a>'
             "</p>",
         )
 
@@ -48,7 +48,7 @@ class ButtonContentTest(TestCase):
             parent=self.page,
             region="main",
             url="http://example.com",
-            style="btn-default",
+            style="btn-secondary",
             title="TEST3",
             align="left",
         )
@@ -57,7 +57,7 @@ class ButtonContentTest(TestCase):
 
         self.assertHTMLEqual(
             html,
-            '<a href="http://example.com" class="btn btn-default pull-left">TEST3</a>',
+            '<a href="http://example.com" class="btn btn-secondary float-start">TEST3</a>',
         )
 
     def test_align_right(self):
@@ -65,7 +65,7 @@ class ButtonContentTest(TestCase):
             parent=self.page,
             region="main",
             url="http://example.com",
-            style="btn-default",
+            style="btn-secondary",
             title="TEST4",
             align="right",
         )
@@ -74,7 +74,7 @@ class ButtonContentTest(TestCase):
 
         self.assertHTMLEqual(
             html,
-            '<a href="http://example.com" class="btn btn-default pull-right">TEST4</a>',
+            '<a href="http://example.com" class="btn btn-secondary float-end">TEST4</a>',
         )
 
     def test_align_block(self):
@@ -82,7 +82,7 @@ class ButtonContentTest(TestCase):
             parent=self.page,
             region="main",
             url="http://example.com",
-            style="btn-default",
+            style="btn-secondary",
             title="TEST5",
             align="block",
         )
@@ -91,7 +91,7 @@ class ButtonContentTest(TestCase):
 
         self.assertHTMLEqual(
             html,
-            '<a href="http://example.com" class="btn btn-default btn-block">TEST5</a>',
+            '<a href="http://example.com" class="btn btn-secondary d-block w-100">TEST5</a>',
         )
 
     def test_object(self):
@@ -99,7 +99,7 @@ class ButtonContentTest(TestCase):
             parent=self.page,
             region="main",
             url="http://example.com",
-            style="btn-default",
+            style="btn-secondary",
             title="TEST-STR",
         )
 
@@ -110,7 +110,7 @@ class ButtonContentTest(TestCase):
             parent=self.page,
             region="main",
             url="http://example.com",
-            style="btn-default",
+            style="btn-secondary",
             title="TEST-URL",
         )
 
