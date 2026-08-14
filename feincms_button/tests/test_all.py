@@ -17,7 +17,7 @@ class ButtonContentTest(TestCase):
             title="TEST",
         )
 
-        html = content.render(kwargs={"context": {}})
+        html = str(content.render())
 
         self.assertHTMLEqual(
             html,
@@ -29,16 +29,89 @@ class ButtonContentTest(TestCase):
             parent=self.page,
             region="main",
             url="http://example.com",
-            style="btn-default",
+            style="btn-secondary",
             title="TEST2",
             align="center",
         )
 
-        html = content.render(kwargs={"context": {}})
+        html = str(content.render())
 
         self.assertHTMLEqual(
             html,
             '<p class="text-center btn-center-wrapper">'
-            '<a href="http://example.com" class="btn btn-default">TEST2</a>'
+            '<a href="http://example.com" class="btn btn-secondary">TEST2</a>'
             "</p>",
         )
+
+    def test_align_left(self):
+        content = PageButtonContent.objects.create(
+            parent=self.page,
+            region="main",
+            url="http://example.com",
+            style="btn-secondary",
+            title="TEST3",
+            align="left",
+        )
+
+        html = str(content.render())
+
+        self.assertHTMLEqual(
+            html,
+            '<a href="http://example.com" class="btn btn-secondary float-start">TEST3</a>',
+        )
+
+    def test_align_right(self):
+        content = PageButtonContent.objects.create(
+            parent=self.page,
+            region="main",
+            url="http://example.com",
+            style="btn-secondary",
+            title="TEST4",
+            align="right",
+        )
+
+        html = str(content.render())
+
+        self.assertHTMLEqual(
+            html,
+            '<a href="http://example.com" class="btn btn-secondary float-end">TEST4</a>',
+        )
+
+    def test_align_block(self):
+        content = PageButtonContent.objects.create(
+            parent=self.page,
+            region="main",
+            url="http://example.com",
+            style="btn-secondary",
+            title="TEST5",
+            align="block",
+        )
+
+        html = str(content.render())
+
+        self.assertHTMLEqual(
+            html,
+            '<a href="http://example.com" class="btn btn-secondary d-block w-100">TEST5</a>',
+        )
+
+    def test_object(self):
+        content = PageButtonContent.objects.create(
+            parent=self.page,
+            region="main",
+            url="http://example.com",
+            style="btn-secondary",
+            title="TEST-STR",
+        )
+
+        self.assertEqual(str(content), "TEST-STR")
+
+    def test_get_absolute_url(self):
+        content = PageButtonContent.objects.create(
+            parent=self.page,
+            region="main",
+            url="http://example.com",
+            style="btn-secondary",
+            title="TEST-URL",
+        )
+
+        self.assertEqual(content.get_absolute_url(), "http://example.com")

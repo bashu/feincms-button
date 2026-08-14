@@ -1,19 +1,19 @@
 feincms-button
 ==============
 
-.. image:: https://img.shields.io/pypi/v/feincms-button.svg
+.. image:: https://badge.fury.io/py/feincms-button.svg
+    :target: https://badge.fury.io/py/feincms-button
+
+.. image:: https://img.shields.io/pypi/pyversions/feincms-button.svg
     :target: https://pypi.python.org/pypi/feincms-button/
 
-.. image:: https://img.shields.io/pypi/dm/feincms-button.svg
+.. image:: https://img.shields.io/pypi/djversions/feincms-button.svg
     :target: https://pypi.python.org/pypi/feincms-button/
 
-.. image:: https://img.shields.io/github/license/bashu/feincms-button.svg
-    :target: https://pypi.python.org/pypi/feincms-button/
+.. image:: https://github.com/bashu/feincms-button/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/bashu/feincms-button/actions/workflows/test.yml
 
-.. image:: https://app.travis-ci.com/bashu/feincms-button.svg?branch=develop
-    :target: https://app.travis-ci.com/bashu/feincms-button/
-
-Displaying a Bootstrap 3 Button_ in text.
+Displaying a Bootstrap Button_ in text.
 
 This button can be used for navigation, for example at the end of a text block. These buttons can't be used in forms.
 
@@ -47,10 +47,10 @@ The button is rendered with the HTML that Bootstrap prescribes:
 
 .. code-block:: html+django
 
-    <a class="btn btn-default" href="#" role="button">Link</a>
+    <a class="btn btn-secondary" href="#" role="button">Link</a>
 
-The standard Bootstrap 3 CSS will provide a reasonable styling for this, which can either be overwritten, or replaced in your own CSS files.
-The defaults provided by Bootstap 3 is: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_buttons.scss
+The standard Bootstrap CSS will provide a reasonable styling for this, which can either be overwritten, or replaced in your own CSS files.
+The defaults provided by Bootstrap are defined here: https://github.com/twbs/bootstrap/blob/main/scss/_buttons.scss
 
 When you use Sass, you can also override the Sass variables.
 
@@ -65,7 +65,7 @@ When desired, the following settings can be overwritten:
     from django.utils.translation import pgettext_lazy
 
     FEINCMS_BUTTON_STYLES = (
-        ('btn-default', pgettext_lazy("button-style", u"Default")),
+        ('btn-secondary', pgettext_lazy("button-style", u"Default")),
         ('btn-primary', pgettext_lazy("button-style", u"Primary")),
         ('btn-success', pgettext_lazy("button-style", u"Success")),
         ('btn-info', pgettext_lazy("button-style", u"Info")),
@@ -78,7 +78,6 @@ When desired, the following settings can be overwritten:
         ('', pgettext_lazy("button-size", u"Default")),
         ('btn-lg', pgettext_lazy("button-size", u"Large")),
         ('btn-sm', pgettext_lazy("button-size", u"Small")),
-        ('btn-xs', pgettext_lazy("button-size", u"Extra Small")),
     )
 
 By default, the standard Bootstrap button classes are used.
@@ -91,4 +90,4 @@ If you like this module, forked it, or would like to improve it, please let us k
 Pull requests are welcome too. :-)
 
 .. _feincms: https://github.com/feincms/feincms
-.. _Button: http://getbootstrap.com/css/#buttons
+.. _Button: https://getbootstrap.com/docs/5.3/components/buttons/

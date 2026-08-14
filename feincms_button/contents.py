@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
-from feincms._internal import ct_render_to_string
+from feincms.utils.tuple import AutoRenderTuple
 
 from . import appsettings
 
@@ -43,18 +43,18 @@ class ButtonContent(models.Model):
         classes = ["btn", self.style, self.size or ""]
         if self.align:
             if self.align == "left":
-                classes.append("pull-left")
+                classes.append("float-start")
             elif self.align == "right":
-                classes.append("pull-right")
+                classes.append("float-end")
             elif self.align == "block":
-                classes.append("btn-block")
+                classes.extend(["d-block", "w-100"])
 
         return " ".join(classes).rstrip().replace("  ", " ")
 
     def render(self, **kwargs):
-        return ct_render_to_string(
-            ["content/button/%s.html" % self.region, "content/button/default.html"],
-            {"content": self},
-            request=kwargs.get("request"),
-            context=kwargs.get("context"),
+        return AutoRenderTuple(
+            (
+                ["content/button/%s.html" % self.region, "content/button/default.html"],
+                {"content": self},
+            )
         )
