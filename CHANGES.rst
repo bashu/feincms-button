@@ -2,7 +2,7 @@ Changes
 -------
 
 26.8.0 (2026-08-14)
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 * Required FeinCMS 26+ and updated ``ButtonContent.render()`` for FeinCMS's
   ``AutoRenderTuple``-based render API (FeinCMS 22.x+), replacing the removed
