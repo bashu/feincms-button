@@ -179,6 +179,6 @@ ini_options.addopts = [ "--ds=feincms_button.tests.settings", "--reuse-db", "--i
 
 # ==== Coverage ====
 [tool.coverage]
+run.source = [ "feincms_button" ]
 run.omit = [ "*/migrations/*", "*/tests/*" ]
 run.relative_files = true
-run.source = [ "feincms_button" ]
