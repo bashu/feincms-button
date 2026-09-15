@@ -55,6 +55,7 @@ dev = [
 
 [tool.setuptools]
 packages.find.include = [ "feincms_button*" ]
+packages.find.exclude = [ "feincms_button.tests*" ]
 include-package-data = true
 package-data.feincms_button = [ "locale/**/*.mo", "locale/**/*.po", "templates/**/*.html" ]
 dynamic.readme = { file = [ "README.rst", "CHANGES.rst" ], content-type = "text/x-rst" }
