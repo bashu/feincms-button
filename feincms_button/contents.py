@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
+
 from feincms.utils.tuple import AutoRenderTuple
 
 from . import appsettings
@@ -23,9 +24,25 @@ class ButtonContent(models.Model):
     title = models.CharField(_("title"), max_length=200)
     url = models.URLField(_("URL"))
 
-    style = models.CharField(_("style"), max_length=50, choices=appsettings.FEINCMS_BUTTON_STYLES)
-    size = models.CharField(_("size"), blank=True, default="", max_length=10, choices=appsettings.FEINCMS_BUTTON_SIZES)
-    align = models.CharField(_("alignment"), blank=True, default="", max_length=50, choices=ALIGN_CHOICES)
+    style = models.CharField(
+        _("style"),
+        max_length=50,
+        choices=appsettings.FEINCMS_BUTTON_STYLES,
+    )
+    size = models.CharField(
+        _("size"),
+        blank=True,
+        default="",
+        max_length=10,
+        choices=appsettings.FEINCMS_BUTTON_SIZES,
+    )
+    align = models.CharField(
+        _("alignment"),
+        blank=True,
+        default="",
+        max_length=50,
+        choices=ALIGN_CHOICES,
+    )
 
     class Meta:
         abstract = True
@@ -54,7 +71,7 @@ class ButtonContent(models.Model):
     def render(self, **kwargs):
         return AutoRenderTuple(
             (
-                ["content/button/%s.html" % self.region, "content/button/default.html"],
+                [f"content/button/{self.region}.html", "content/button/default.html"],
                 {"content": self},
-            )
+            ),
         )

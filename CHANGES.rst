@@ -1,6 +1,13 @@
 Changes
 -------
 
+26.10.0 (2026-10-10)
+~~~~~~~~~~~~~~~~~~~~
+
+* Excluded the ``tests`` package from the built wheel/sdist.
+* Added Python 3.15 support.
+* Dropped Python 3.10 support; Python 3.11 is now the minimum supported version.
+
 26.8.0 (2026-08-14)
 ~~~~~~~~~~~~~~~~~~~
 
